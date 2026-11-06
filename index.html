@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syncro Zenith | Industrial Automation & Solar Energy Solutions</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom Style Sheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation Header -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo" onclick="switchPage('home')">
+                <!-- Editable Logo Placeholder -->
+                <div class="logo-placeholder">SZ</div>
+                Syncro <span>Zenith</span>
+            </a>
+            <nav class="nav-links">
+                <a href="#home" class="nav-btn active" data-page="home">Home</a>
+                <a href="#products" class="nav-btn" data-page="products">Products</a>
+                <a href="#solutions" class="nav-btn" data-page="solutions">Solutions</a>
+                <a href="#about" class="nav-btn" data-page="about">About Us</a>
+                <a href="#contact" class="nav-btn" data-page="contact">Contact Us</a>
+            </nav>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+
+        <!-- 1. HOME PAGE -->
+        <section id="home" class="page-section active">
+            <div class="hero">
+                <div class="hero-content">
+                    <span class="badge"><i class="fa-solid fa-leaf"></i> Focused on your performance. Committed to our planet.</span>
+                    <h1>Automation & Solar Energy for a Sustainable Tomorrow</h1>
+                    <p>Smart, cost-effective solar PV installation, hybrid power systems, and energy-efficient automation integration designed to cut costs and support a cleaner future.</p>
+                    <div class="hero-actions">
+                        <button class="btn btn-primary" onclick="switchPage('solutions')">Explore Solutions <i class="fa-solid fa-arrow-right"></i></button>
+                        <button class="btn btn-outline" onclick="switchPage('contact')">Contact Engineering</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="stats-bar">
+                <div class="stat-item">
+                    <h3>Affordable</h3>
+                    <p>Cost-Effective Innovation</p>
+                </div>
+                <div class="stat-item">
+                    <h3>Eco-Friendly</h3>
+                    <p>Solar & Green Power Systems</p>
+                </div>
+                <div class="stat-item">
+                    <h3>Weekly & Monthly</h3>
+                    <p>Excel-Based Energy Reports</p>
+                </div>
+                <div class="stat-item">
+                    <h3>24/7 Support</h3>
+                    <p>Reliable Technical Service</p>
+                </div>
+            </div>
+
+            <div class="section-container">
+                <div class="page-header">
+                    <h2>Why Choose Syncro Zenith?</h2>
+                    <p>Delivering cutting-edge engineering with uncompromising environmental standards.</p>
+                </div>
+                <div class="grid grid-3">
+                    <div class="card">
+                        <div class="card-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&w=600&q=80" alt="Solar PV & Hybrid Systems">
+                        </div>
+                        <div class="card-body">
+                            <div>
+                                <h3>01. Solar PV & Hybrid Systems</h3>
+                                <p>Expert rooftop and ground-mounted solar installations paired with hybrid inverters and battery storage for uninterrupted clean energy.</p>
+                            </div>
+                            <button class="btn btn-sm btn-outline" onclick="switchPage('solutions')">Learn More</button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80" alt="Cost-Effective Innovation">
+                        </div>
+                        <div class="card-body">
+                            <div>
+                                <h3>02. Cost-Effective Innovation</h3>
+                                <p>Top-quality automation and solar solutions delivered at lower prices than standard market alternatives, making sustainability accessible.</p>
+                            </div>
+                            <button class="btn btn-sm btn-outline" onclick="switchPage('solutions')">Learn More</button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80" alt="Energy Reporting">
+                        </div>
+                        <div class="card-body">
+                            <div>
+                                <h3>03. Excel Energy Reporting</h3>
+                                <p>Track, analyze, and optimize your power usage with transparent weekly and monthly Excel-based reporting tools.</p>
+                            </div>
+                            <button class="btn btn-sm btn-outline" onclick="switchPage('solutions')">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. PRODUCTS PAGE -->
+        <section id="products" class="page-section">
+            <div class="section-container">
+                <div class="page-header">
+                    <h2>Hardware & System Components</h2>
+                    <p>Certified solar inverters, battery storage units, power meters, and controllers for sustainable facilities.</p>
+                </div>
+
+                <div class="filter-bar" id="filterBar">
+                    <!-- Dynamic Filters rendered from script.js -->
+                </div>
+
+                <div class="grid grid-3" id="productGrid">
+                    <!-- Dynamic Products rendered from script.js -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. SOLUTIONS PAGE -->
+        <section id="solutions" class="page-section">
+            <div class="section-container">
+                <div class="page-header">
+                    <h2>Our Solutions & Focus Areas</h2>
+                    <p>Delivering sustainable solar installations, automation, and energy management for a greener future.</p>
+                </div>
+
+                <div class="solutions-wrapper" id="solutionsWrapper">
+                    <!-- Dynamic Solutions rendered from script.js -->
+                </div>
+
+                <!-- Interactive Project Estimator -->
+                <div class="calculator-box">
+                    <h3>Estimate Your Solar & Automation System Investment</h3>
+                    <p style="color: #a1a1aa; margin-bottom: 1.5rem;">Select your scope requirements below to calculate an estimated baseline budget.</p>
+                    <form id="estimatorForm" class="estimator-form">
+                        <div class="form-group">
+                            <label>Primary Service / Solution</label>
+                            <select id="estScope">
+                                <!-- Options dynamically generated -->
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Facility Scale / Capacity</label>
+                            <select id="estIO">
+                                <option value="1500">Small Scale / Residential (< 5 kW / 32 Nodes)</option>
+                                <option value="3500">Medium Scale / Commercial (5 - 20 kW / 128 Nodes)</option>
+                                <option value="7000">Large Scale / Industrial (> 20 kW / Full Plant)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>On-Site Installation Days</label>
+                            <input type="number" id="estDays" value="3" min="1" max="30">
+                        </div>
+                    </form>
+                    <div class="estimator-result">
+                        <span>Estimated Baseline Budget:</span>
+                        <h2 id="estimatorTotal">$7,500</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. ABOUT US PAGE -->
+        <section id="about" class="page-section">
+            <div class="section-container">
+                <div class="page-header">
+                    <h2>About Syncro Zenith</h2>
+                    <p>Engineering the future with purpose—where performance meets planet.</p>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-content-box">
+                        <h3>Our Mission & Commitment</h3>
+                        <p>At <strong>Syncro Zenith</strong>, our commitment is to build a future where industrial automation, solar energy, and environmental sustainability go hand in hand. We believe that every system—whether in solar power generation, food processing, water treatment, or building management—can be made smarter, cleaner, and more affordable.</p>
+                        <p>We are not just system integrators; we are your partners in progress. Our solutions are specifically engineered to reduce environmental impact, eliminate energy waste, and make high-performance automation and solar tech accessible to all sectors without the high cost.</p>
+                        
+                        <h3 style="margin-top: 1.75rem; font-size: 1.35rem;">Capacity Building & Training</h3>
+                        <p>We actively support industrial growth and youth empowerment through structured <strong>Student Internship Programs</strong>, <strong>Operator Training</strong>, and applied <strong>Research & Development</strong>.</p>
+                    </div>
+
+                    <div class="about-image-stack">
+                        <img src="https://images.unsplash.com/photo-1509391365330-2e8a1768a416?auto=format&fit=crop&w=800&q=80" alt="Syncro Zenith Solar Project">
+                        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80" alt="Automation Engineering">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. CONTACT US PAGE -->
+        <section id="contact" class="page-section">
+            <div class="section-container">
+                <div class="page-header">
+                    <h2>Get in Touch with Our Engineers</h2>
+                    <p>Let's build sustainable solar and automation systems together.</p>
+                </div>
+
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h3>Our Locations & Details</h3>
+                        
+                        <div class="info-item">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <div>
+                                <strong>Yangon Branch:</strong>
+                                <p>Thudamar 1st Street North, Oakkalapa, Yangon, Myanmar</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <i class="fa-solid fa-building"></i>
+                            <div>
+                                <strong>Bago Branch:</strong>
+                                <p>No-167, Phone Waizer Street, Shwemawdaw Pagoda Road (North), Bago, Myanmar</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <i class="fa-solid fa-phone"></i>
+                            <div>
+                                <strong>Phone Lines:</strong>
+                                <p>+959 789 978 076<br>+959 454 740 385</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <i class="fa-solid fa-envelope"></i>
+                            <div>
+                                <strong>Email Address:</strong>
+                                <p>syncrozenith.sz@gmail.com</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <i class="fa-solid fa-clock"></i>
+                            <div>
+                                <strong>Working Hours:</strong>
+                                <p>09:00 AM - 05:00 PM (Monday to Saturday)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-card">
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="cName">Your Name / Organization</label>
+                                <input type="text" id="cName" placeholder="e.g. U Zaw Lin / Green Rice Mill Co." required>
+                            </div>
+                            <div class="form-group">
+                                <label for="cEmail">Email Address / Phone Number</label>
+                                <input type="text" id="cEmail" placeholder="e.g. client@company.com or 09..." required>
+                            </div>
+                            <div class="form-group">
+                                <label for="cSubject">Inquiry / Service Area</label>
+                                <select id="cSubject">
+                                    <option>Solar PV & Hybrid Power Installation</option>
+                                    <option>Food & Grain Processing Automation</option>
+                                    <option>Water & Wastewater System</option>
+                                    <option>Energy Monitoring & Excel Reporting</option>
+                                    <option>Building Management System (BMS)</option>
+                                    <option>Student Internship / Operator Training</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="cMessage">Project Requirements / Details</label>
+                                <textarea id="cMessage" rows="4" placeholder="Describe your solar power requirements, facility location, or automation scope..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">Submit Inquiry</button>
+                        </form>
+                        <div id="formAlert" class="alert-box"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Modal Dialog for Product Inquiries -->
+    <div id="quoteModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3 style="margin-bottom: 1rem; color: var(--bg-dark);">Request Quote for <span id="modalProductName"></span></h3>
+            <form id="modalForm">
+                <div class="form-group" style="margin-bottom: 1rem;">
+                    <label style="color: var(--text-main);">Quantity Required</label>
+                    <input type="number" value="1" min="1" required style="background: #fff; color: var(--text-main); border: 1px solid var(--border-color);">
+                </div>
+                <div class="form-group" style="margin-bottom: 1.5rem;">
+                    <label style="color: var(--text-main);">Contact Phone / Email</label>
+                    <input type="text" placeholder="e.g. 09123456789 or email@domain.com" required style="background: #fff; color: var(--text-main); border: 1px solid var(--border-color);">
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Send Quote Request</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Site Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <strong>Syncro Zenith</strong>
+                <p>Cost-Effective | Energy-Saving | Environmentally Safe</p>
+                <p style="color: var(--primary-color); font-size: 0.8125rem; font-weight: 500; margin-top: 0.2rem;">Focused on your performance. Committed to our planet.</p>
+            </div>
+            <div class="footer-links">
+                <a href="#home" onclick="switchPage('home')">Home</a>
+                <a href="#products" onclick="switchPage('products')">Products</a>
+                <a href="#solutions" onclick="switchPage('solutions')">Solutions</a>
+                <a href="#about" onclick="switchPage('about')">About</a>
+                <a href="#contact" onclick="switchPage('contact')">Contact</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 Syncro Zenith Engineering Co., Ltd. All rights reserved. Designed for sustainable industrial automation.
+        </div>
+    </footer>
+
+    <!-- JavaScript Bundle -->
+    <script src="script.js"></script>
+</body>
+</html>
